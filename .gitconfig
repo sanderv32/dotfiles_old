@@ -1,0 +1,37 @@
+[core]
+  pages=less -FRSX
+  editor=vim -f
+  autocrlf = input
+
+[user]
+  name=Alexander Verhaar
+  email=sanderv32@gmail.com
+	signingkey = 944252C8B7667A00
+
+[color]
+  interactive=auto
+  diff=auto
+  status=auto
+  branch=auto
+  ui=auto
+
+[credential]
+  helper=osxkeychain
+
+[alias]
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  workprofile = !git config user.email \"alexander.verhaar@solvinity.com\" && git config user.name \"Alexander Verhaar\"
+  ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+  commits = commit -S
+  #pushall = !f() { for i in $(git remote -v | grep "push" | cut -f 1); do git push -u $i $1; done }; f
+
+[help]
+  autocorrect = 1
+
+[filter "versioning"]
+  clean = verclean
+  smudge = verset
+
+;  vim: set ts=2 sw=2 tw=0 ft=gitconfig et :

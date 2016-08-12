@@ -1,0 +1,14 @@
+*
+!.ansible.cfg
+!.bash_aliases
+!.bash_functions
+!.bash_profile
+!.bashrc
+!.git-prompt-colors.sh
+!.gitconfig
+!.gitignore
+!.inputrc
+!.pythonrc
+!.tmux.conf
+!.vimrc
+!.zshrc
